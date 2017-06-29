@@ -23,7 +23,7 @@ namespace WebApplication2.Controllers
 
             if (btnPressedName.Equals("Logar"))
             {
-                LoginModel user = new LoginViewModel().Login_(model.Login, model.Password);
+                LoginModel user = model.Login_();
                 bool logged = true;
 
 

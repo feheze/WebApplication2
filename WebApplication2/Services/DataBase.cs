@@ -53,7 +53,6 @@ namespace WebApplication2.Services
                     command.Parameters.Add(parameterItem);
                 }
             }
-
             return command.ExecuteNonQuery();
         }
     }

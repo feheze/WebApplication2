@@ -13,11 +13,11 @@ namespace WebApplication2.ViewModel
         public string Login { get; set; }
         public string Password { get; set; }
 
-        public LoginModel Login_(string login, string pass)
+        public LoginModel Login_()
         {
             List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter("@login", login));
-            parameters.Add(new SqlParameter("@pass", pass));
+            parameters.Add(new SqlParameter("@login", Login));
+            parameters.Add(new SqlParameter("@pass", Password));
 
             SqlDataReader dr = DataBase.Get("select * from Login where login=@login and password=@pass and deleted=0 ", parameters);
             
