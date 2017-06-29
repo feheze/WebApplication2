@@ -1,0 +1,37 @@
+﻿@model WebApplication2.ViewModel.SearchViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Pesquisa</h2>
+    @using (Html.BeginForm("Search", "Pesquisa", FormMethod.Post))
+    {
+        @Html.Label("Código: ")        
+        @Html.TextBoxFor(id_ => id_.Id)
+        <br />
+        @Html.Label("Usuário: ")
+        @Html.TextBoxFor(login_ => login_.Login)
+        <br />
+        @Html.Label("Senha: ")
+        @Html.TextBoxFor(password_ => password_.Password)
+        <br />
+        @Html.Label("Removido: ")
+        @Html.TextBoxFor(deleted_ => deleted_.Deleted)
+        <br />
+        <input name="submit" type="submit" value="Salvar" />
+        <br />
+        @Html.Label("Pesquisar Login")
+        <br />
+        @Html.TextBoxFor(seach_ => seach_.SearchBy)
+        <input name="submit" type="submit" value="Procurar" />
+    }
+</body>
+</html>

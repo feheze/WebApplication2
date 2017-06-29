@@ -1,0 +1,27 @@
+﻿@model WebApplication2.ViewModel.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        @Html.Label("Usuário")
+        @Html.TextBoxFor(a => a.Login)
+        @Html.Label("Senha")
+        @Html.TextBoxFor(a => a.Password)
+
+
+        <input name="submit" type="submit" value="Logar" />
+        <input name="submit" type="submit" value="Cadastrar" />
+    }
+</body>
+</html>
