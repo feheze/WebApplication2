@@ -30,7 +30,6 @@ namespace WebApplication2.Controllers
                 model.Login = user.Login;
                 model.Password = user.Password;
                 model.Deleted = user.Deleted;
-                model.EnableEdit = false;
             }
                 
 

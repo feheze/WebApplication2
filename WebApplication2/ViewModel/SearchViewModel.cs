@@ -14,7 +14,6 @@ namespace WebApplication2.ViewModel
         public string Password { get; set; }
         public bool Deleted { get; set; }
         public string SearchBy { get; set; }
-        public bool EnableEdit { get; set; }
 
 
         public void Save()
